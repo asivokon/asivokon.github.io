@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Neural Attention Mechanism in NLP</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      .left-column30 {
+        width: 30%;
+        float: left;
+      }
+
+      .right-column70 {
+        width: 70%;
+        float: right;
+      }
+
+      .left-column50 {
+        width: 50%;
+        float: left;
+      }
+
+      .right-column50 {
+        width: 50%;
+        float: right;
+      }
+
+      .small {
+        font-size: small;
+      }
+
+      .large {
+        font-size: x-large;
+      }
+
+      .medium {
+        font-size: medium;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 80%;
+        margin-left:auto;
+        margin-right:auto;
+        font-size: medium;
+      }
+      th, td {
+        padding: 5px;
+        border: 1px dotted #f0f0f0;
+          
+      }
+      th {background: #e0e0e0; font-family: sans-serif; padding: 10px}
+      tr:nth-child(even) {background: #f3f3f3; }
+
+      .block {
+          height: 110px;
+          //border: 1px solid red;
+          margin-top: -20px;
+          margin-bottom: -50px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <script>
+      remark.macros.scale = function (percentage) {
+        var url = this;
+        return '<img src="' + url + '" style="width: ' + percentage + '" />';
+      };
+
+      var renderMath = function() {
+        renderMathInElement(document.body, {
+          delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false},
+          //{left: "\\[", right: "\\]", display: true},
+          //{left: "\\(", right: "\\)", display: false},
+        ]});
+      }
+      var slideshow = remark.create({sourceUrl: 'attention.md'}, renderMath);
+setTimeout(renderMath, 5001);
+
+    </script>
+  </body>
+</html>
+
